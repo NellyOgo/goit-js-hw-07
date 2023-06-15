@@ -23,6 +23,8 @@ galleryEl.innerHTML = galleryAdd;
 
 const galleryLinks = document.querySelectorAll('.gallery__link');
 
+galleryEl.addEventListener('click', onGalleryClick);
+
 function onGalleryClick(event) {
   event.preventDefault();
   if (event.target.nodeName !== 'IMG') return;
@@ -38,4 +40,4 @@ function onGalleryClick(event) {
   }
 }
 
-galleryLinks.forEach(link => link.addEventListener('click', onGalleryClick));
+
